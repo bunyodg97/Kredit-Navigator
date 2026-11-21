@@ -1,0 +1,24 @@
+plugins { id 'com.android.application' version '8.7.3' apply false }
+
+org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+android.useAndroidX=true
+
+KREDIT NAVIGATOR — GITHUB ACTIONS ORQALI APK
+
+1. GitHub saytida yangi repository yarating (Private tavsiya etiladi).
+2. Ushbu ZIP ichidagi barcha fayl va papkalarni repository ildiziga yuklang.
+   Muhim: .github/workflows/build-apk.yml ham aynan shu joyda saqlansin.
+3. GitHub > Actions > Build Kredit Navigator APK > Run workflow tugmasini bosing.
+   Yoki main/master branchga push qilinsa avtomatik ishga tushadi.
+4. Build yashil tugagach, o‘sha ish sahifasidagi Artifacts bo‘limidan
+   Kredit-Navigator-V3_5-debug-APK ni yuklab oling.
+5. Yuklangan artifact ZIP ichida app-debug.apk bo‘ladi.
+
+Eslatma: Bu DEBUG imzolangan APK, Play Store uchun release emas.
+GitHub Actions internetdan Android SDK, Gradle va kutubxonalarni oladi.
+GitHub serverida yig‘ish hali amalda sinovdan o‘tkazilmagan.
+
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories { google(); mavenCentral() } }
+rootProject.name='KreditNavigator'
+include ':app'
